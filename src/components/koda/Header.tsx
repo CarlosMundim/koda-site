@@ -3,29 +3,46 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-const navItems = [
+const navItemsEN = [
   { label: 'Products', href: '/products' },
   { label: 'Solutions', href: '/solutions' },
   { label: 'Services', href: '/services' },
-  { label: 'Security & Governance', href: '/security' },
+  { label: 'Security', href: '/security' },
   { label: 'Contact', href: '/contact' },
 ]
 
-export default function Header() {
+const navItemsJP = [
+  { label: 'プロダクト', href: '/jp/products' },
+  { label: 'ソリューション', href: '/jp/solutions' },
+  { label: 'サービス', href: '/jp/services' },
+  { label: 'セキュリティ', href: '/jp/security' },
+  { label: 'お問い合わせ', href: '/jp/contact' },
+]
+
+interface HeaderProps {
+  locale?: 'en' | 'jp'
+}
+
+export default function Header({ locale = 'en' }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const isJP = locale === 'jp'
+  const navItems = isJP ? navItemsJP : navItemsEN
+  const homeHref = isJP ? '/jp' : '/'
+  const switchHref = isJP ? '/' : '/jp'
+  const switchLabel = isJP ? 'EN' : 'JP'
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={homeHref} className="flex items-center gap-2">
             <span className="text-xl font-bold text-neutral-900">KODA</span>
             <span className="text-sm text-neutral-500">by Solunai</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -37,11 +54,14 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Language Switch (placeholder) */}
-          <div className="hidden md:flex items-center gap-4">
-            <button className="text-sm text-neutral-500 hover:text-neutral-900">EN</button>
-            <span className="text-neutral-300">|</span>
-            <button className="text-sm text-neutral-500 hover:text-neutral-900">JP</button>
+          {/* Language Switch */}
+          <div className="hidden md:flex items-center">
+            <Link
+              href={switchHref}
+              className="text-sm font-medium text-koda-red hover:text-koda-red-dark transition-colors"
+            >
+              {switchLabel}
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -73,10 +93,14 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="flex items-center gap-4 pt-4 mt-4 border-t border-neutral-100">
-              <button className="text-sm text-neutral-500 hover:text-neutral-900">EN</button>
-              <span className="text-neutral-300">|</span>
-              <button className="text-sm text-neutral-500 hover:text-neutral-900">JP</button>
+            <div className="pt-4 mt-4 border-t border-neutral-100">
+              <Link
+                href={switchHref}
+                className="text-sm font-medium text-koda-red hover:text-koda-red-dark"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {switchLabel === 'JP' ? '日本語に切替' : 'Switch to English'}
+              </Link>
             </div>
           </nav>
         )}

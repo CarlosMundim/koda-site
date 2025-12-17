@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const footerLinks = {
+const footerLinksEN = {
   products: [
     { label: 'KODA Predict', href: '/products/predict' },
     { label: 'KODA Optimise', href: '/products/optimise' },
@@ -16,9 +16,50 @@ const footerLinks = {
   parent: [
     { label: 'Solunai Corporate', href: 'https://www.solunai.co.jp' },
   ],
+  labels: {
+    products: 'Products',
+    company: 'Company',
+    parent: 'Parent Company',
+    description: 'Industrial AI products designed for controlled operation.',
+    brand: 'A Solunai brand',
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Use',
+  },
 }
 
-export default function Footer() {
+const footerLinksJP = {
+  products: [
+    { label: 'KODA Predict', href: '/jp/products/predict' },
+    { label: 'KODA Optimise', href: '/jp/products/optimise' },
+    { label: 'KODA Vision', href: '/jp/products/vision' },
+    { label: 'KODA Twin', href: '/jp/products/twin' },
+    { label: 'ホワイトラベル', href: '/jp/products/white-label' },
+  ],
+  company: [
+    { label: 'KODAについて', href: '/jp/about' },
+    { label: 'セキュリティ', href: '/jp/security' },
+    { label: 'お問い合わせ', href: '/jp/contact' },
+  ],
+  parent: [
+    { label: 'Solunai 企業サイト', href: 'https://www.solunai.co.jp' },
+  ],
+  labels: {
+    products: 'プロダクト',
+    company: '会社情報',
+    parent: '親会社',
+    description: '統制運用を前提としたAI製品。',
+    brand: 'Solunaiブランド',
+    privacy: 'プライバシーポリシー',
+    terms: '利用規約',
+  },
+}
+
+interface FooterProps {
+  locale?: 'en' | 'jp'
+}
+
+export default function Footer({ locale = 'en' }: FooterProps) {
+  const footerLinks = locale === 'jp' ? footerLinksJP : footerLinksEN
   return (
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
@@ -27,16 +68,16 @@ export default function Footer() {
           <div>
             <div className="text-xl font-bold text-neutral-900 mb-2">KODA</div>
             <p className="text-sm text-neutral-500 mb-4">
-              Industrial AI products designed for controlled operation.
+              {footerLinks.labels.description}
             </p>
             <p className="text-xs text-neutral-400">
-              A Solunai brand
+              {footerLinks.labels.brand}
             </p>
           </div>
 
           {/* Products */}
           <div>
-            <h4 className="text-sm font-semibold text-neutral-900 mb-4">Products</h4>
+            <h4 className="text-sm font-semibold text-neutral-900 mb-4">{footerLinks.labels.products}</h4>
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.href}>
@@ -50,7 +91,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-sm font-semibold text-neutral-900 mb-4">Company</h4>
+            <h4 className="text-sm font-semibold text-neutral-900 mb-4">{footerLinks.labels.company}</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -64,7 +105,7 @@ export default function Footer() {
 
           {/* Parent */}
           <div>
-            <h4 className="text-sm font-semibold text-neutral-900 mb-4">Parent Company</h4>
+            <h4 className="text-sm font-semibold text-neutral-900 mb-4">{footerLinks.labels.parent}</h4>
             <ul className="space-y-2">
               {footerLinks.parent.map((link) => (
                 <li key={link.href}>
@@ -88,11 +129,11 @@ export default function Footer() {
             © {new Date().getFullYear()} Solunai Co., Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/security" className="text-xs text-neutral-400 hover:text-neutral-600">
-              Privacy Policy
+            <Link href={locale === 'jp' ? '/jp/security' : '/security'} className="text-xs text-neutral-400 hover:text-neutral-600">
+              {footerLinks.labels.privacy}
             </Link>
-            <Link href="/security" className="text-xs text-neutral-400 hover:text-neutral-600">
-              Terms of Use
+            <Link href={locale === 'jp' ? '/jp/security' : '/security'} className="text-xs text-neutral-400 hover:text-neutral-600">
+              {footerLinks.labels.terms}
             </Link>
           </div>
         </div>
