@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  --koda-red: #c41e3a;
+  --koda-red-dark: #a01830;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+}
+
+/* Japanese text optimization */
+html:lang(ja) {
+  line-height: 1.8;
+}
+
+/* Enterprise-grade subtle styling */
+.divider-subtle {
+  @apply border-t border-neutral-200;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-narrow {
+  @apply max-w-5xl mx-auto px-6 md:px-8;
+}
+
+.container-wide {
+  @apply max-w-7xl mx-auto px-6 md:px-8;
+}

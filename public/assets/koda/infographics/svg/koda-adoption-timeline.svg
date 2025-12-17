@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <style>
+    .title { font: bold 18px Inter, sans-serif; fill: #171717; }
+    .phase { font: 600 16px Inter, sans-serif; fill: #171717; }
+    .desc { font: 13px Inter, sans-serif; fill: #525252; }
+    .timeline { stroke: #e5e5e5; stroke-width: 4; }
+    .dot { fill: #c41e3a; }
+    .dot-inactive { fill: #d4d4d4; }
+  </style>
+
+  <!-- Timeline line -->
+  <line x1="100" y1="80" x2="700" y2="80" class="timeline"/>
+
+  <!-- Phase 1: Pilot -->
+  <circle cx="150" cy="80" r="12" class="dot"/>
+  <text x="150" y="120" text-anchor="middle" class="phase">Pilot</text>
+  <text x="150" y="145" text-anchor="middle" class="desc">4-8 weeks</text>
+  <text x="150" y="165" text-anchor="middle" class="desc">Controlled test</text>
+
+  <!-- Phase 2: Expand -->
+  <circle cx="400" cy="80" r="12" class="dot-inactive"/>
+  <text x="400" y="120" text-anchor="middle" class="phase">Expand</text>
+  <text x="400" y="145" text-anchor="middle" class="desc">2-6 months</text>
+  <text x="400" y="165" text-anchor="middle" class="desc">Scale deployment</text>
+
+  <!-- Phase 3: Operate -->
+  <circle cx="650" cy="80" r="12" class="dot-inactive"/>
+  <text x="650" y="120" text-anchor="middle" class="phase">Operate</text>
+  <text x="650" y="145" text-anchor="middle" class="desc">Ongoing</text>
+  <text x="650" y="165" text-anchor="middle" class="desc">Full production</text>
+
+  <!-- Arrows -->
+  <path d="M175 80 L375 80" stroke="#c41e3a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M425 80 L625 80" stroke="#d4d4d4" stroke-width="2"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#c41e3a"/>
+    </marker>
+  </defs>
+</svg>

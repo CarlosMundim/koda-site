@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <style>
+    .title { font: bold 24px Inter, sans-serif; fill: #171717; }
+    .label { font: 600 16px Inter, sans-serif; fill: #171717; }
+    .desc { font: 14px Inter, sans-serif; fill: #525252; }
+    .box { fill: #fafafa; stroke: #e5e5e5; stroke-width: 2; }
+    .box-products { fill: #fef2f2; stroke: #c41e3a; }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">The KODA Triad</text>
+
+  <!-- Products Box -->
+  <rect x="50" y="80" width="200" height="180" rx="8" class="box box-products"/>
+  <text x="150" y="120" text-anchor="middle" class="label">Products</text>
+  <text x="150" y="150" text-anchor="middle" class="desc">Safe packages</text>
+  <text x="150" y="175" text-anchor="middle" class="desc">you deploy</text>
+  <text x="150" y="220" text-anchor="middle" class="desc" style="fill: #c41e3a">Predict • Optimise</text>
+  <text x="150" y="240" text-anchor="middle" class="desc" style="fill: #c41e3a">Vision • Twin</text>
+
+  <!-- Solutions Box -->
+  <rect x="300" y="80" width="200" height="180" rx="8" class="box"/>
+  <text x="400" y="120" text-anchor="middle" class="label">Solutions</text>
+  <text x="400" y="150" text-anchor="middle" class="desc">Internal engines</text>
+  <text x="400" y="175" text-anchor="middle" class="desc">(not sold separately)</text>
+  <text x="400" y="220" text-anchor="middle" class="desc" style="fill: #737373">AI models</text>
+  <text x="400" y="240" text-anchor="middle" class="desc" style="fill: #737373">Processing logic</text>
+
+  <!-- Services Box -->
+  <rect x="550" y="80" width="200" height="180" rx="8" class="box"/>
+  <text x="650" y="120" text-anchor="middle" class="label">Services</text>
+  <text x="650" y="150" text-anchor="middle" class="desc">Human engagement</text>
+  <text x="650" y="175" text-anchor="middle" class="desc">and expertise</text>
+  <text x="650" y="220" text-anchor="middle" class="desc" style="fill: #737373">Assessment</text>
+  <text x="650" y="240" text-anchor="middle" class="desc" style="fill: #737373">Implementation</text>
+</svg>
