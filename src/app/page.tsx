@@ -66,11 +66,17 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <Hero
-        title="KODA — Industrial AI products designed for controlled operation"
+        eyebrow="KODA by Solunai"
+        title="Industrial AI products designed for controlled operation"
         subtitle="Enterprise-grade AI tools for manufacturing and industrial operations. Built for Japanese quality standards. Operator-in-loop by design."
+        qualifier="All KODA products maintain human authority over critical decisions. AI assists, never overrides."
         cta={{
           label: 'Request Technical Briefing',
           href: '/contact',
+        }}
+        secondaryCta={{
+          label: 'View Products',
+          href: '/products',
         }}
         imageSrc="/assets/koda/hero/products/koda-home-hero.png"
         imageAlt="KODA Industrial AI"

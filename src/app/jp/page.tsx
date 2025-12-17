@@ -66,11 +66,17 @@ export default function JPHomePage() {
     <>
       {/* Hero */}
       <Hero
-        title="KODA — 統制運用を前提としたAI製品"
+        eyebrow="KODA by Solunai"
+        title="統制運用を前提に設計された産業向けAIプロダクト"
         subtitle="製造・産業向けエンタープライズAIツール。日本品質基準に準拠。オペレーター・イン・ザ・ループ設計。"
+        qualifier="すべてのKODA製品は、重要な意思決定において人間の権限を維持します。AIは支援し、決して上書きしません。"
         cta={{
           label: '技術ブリーフィングを依頼',
           href: '/jp/contact',
+        }}
+        secondaryCta={{
+          label: 'プロダクトを見る',
+          href: '/jp/products',
         }}
         imageSrc="/assets/koda/hero/products/koda-home-hero.png"
         imageAlt="KODA 産業AI"

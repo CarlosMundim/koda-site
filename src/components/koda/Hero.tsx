@@ -1,7 +1,13 @@
 interface HeroProps {
   title: string
   subtitle?: string
+  eyebrow?: string
+  qualifier?: string
   cta?: {
+    label: string
+    href: string
+  }
+  secondaryCta?: {
     label: string
     href: string
   }
@@ -13,7 +19,10 @@ interface HeroProps {
 export default function Hero({
   title,
   subtitle,
+  eyebrow,
+  qualifier,
   cta,
+  secondaryCta,
   imageSrc,
   imageAlt = 'Hero image',
   variant = 'default'
@@ -36,26 +45,50 @@ export default function Hero({
       )}
 
       <div className={`relative z-10 max-w-4xl mx-auto px-8 md:px-12 ${isFullscreen ? 'py-24 md:py-32' : 'py-16 md:py-24'} text-center`}>
+        {eyebrow && (
+          <p className={`text-sm md:text-base font-medium tracking-wider uppercase mb-6 ${isDark ? 'text-koda-red' : 'text-koda-red'}`}>
+            {eyebrow}
+          </p>
+        )}
+
         <h1 className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-8 md:mb-12 tracking-tight ${isDark ? 'text-white' : 'text-neutral-900'}`}>
           {title}
         </h1>
 
         {subtitle && (
-          <p className={`text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl mx-auto mb-12 md:mb-16 font-light ${isDark ? 'text-neutral-300' : 'text-neutral-600'}`}>
+          <p className={`text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl mx-auto mb-8 md:mb-10 font-light ${isDark ? 'text-neutral-300' : 'text-neutral-600'}`}>
             {subtitle}
           </p>
         )}
 
-        {cta && (
-          <a
-            href={cta.href}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-koda-red text-white font-medium rounded hover:bg-koda-red-dark transition-colors text-lg"
-          >
-            {cta.label}
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+        {qualifier && (
+          <p className={`text-xs md:text-sm max-w-xl mx-auto mb-12 md:mb-16 ${isDark ? 'text-neutral-400' : 'text-neutral-500'}`}>
+            {qualifier}
+          </p>
+        )}
+
+        {(cta || secondaryCta) && (
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {cta && (
+              <a
+                href={cta.href}
+                className="inline-flex items-center gap-3 px-8 py-4 bg-koda-red text-white font-medium rounded hover:bg-koda-red-dark transition-colors text-lg"
+              >
+                {cta.label}
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            )}
+            {secondaryCta && (
+              <a
+                href={secondaryCta.href}
+                className={`inline-flex items-center gap-2 px-6 py-4 font-medium rounded transition-colors text-lg ${isDark ? 'text-white border border-white/30 hover:bg-white/10' : 'text-neutral-700 border border-neutral-300 hover:bg-neutral-100'}`}
+              >
+                {secondaryCta.label}
+              </a>
+            )}
+          </div>
         )}
       </div>
 
