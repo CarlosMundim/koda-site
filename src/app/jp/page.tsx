@@ -9,31 +9,37 @@ const products = [
     name: 'KODA Cultural',
     tagline: '異文化コミュニケーションAI。グローバル運用における言語・文化の壁を解消。',
     href: '/jp/products/cultural',
+    logo: '/assets/koda/logos/web/koda-cultural-jp.png',
   },
   {
     name: 'KODA MedComm',
     tagline: '医療コミュニケーション支援。正確でコンプライアント準拠の医療文書作成。',
     href: '/jp/products/medcomm',
+    logo: '/assets/koda/logos/web/koda-medcomm-jp.png',
   },
   {
     name: 'KODA Assist',
     tagline: '業務アシスタントAI。リアルタイムガイダンスで現場作業者を支援。',
     href: '/jp/products/assist',
+    logo: '/assets/koda/logos/web/koda-assist-jp.png',
   },
   {
     name: 'KODA DocIntel',
     tagline: '文書インテリジェンス。技術文書からインサイトを抽出。',
     href: '/jp/products/docintel',
+    logo: '/assets/koda/logos/web/koda-docintel-jp.png',
   },
   {
     name: 'KODA Training',
     tagline: 'トレーニング・シミュレーションAI。適応学習で人材育成を加速。',
     href: '/jp/products/training',
+    logo: '/assets/koda/logos/web/koda-training-jp.png',
   },
   {
     name: 'KODA Industry',
     tagline: '産業プロセスAI。ドメイン特化インテリジェンスで製造を最適化。',
     href: '/jp/products/industry',
+    logo: '/assets/koda/logos/web/koda-industry-jp.png',
   },
 ]
 

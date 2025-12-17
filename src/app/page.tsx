@@ -9,31 +9,37 @@ const products = [
     name: 'KODA Cultural',
     tagline: 'Cross-cultural communication AI. Bridge language and cultural gaps in global operations.',
     href: '/products/cultural',
+    logo: '/assets/koda/logos/web/koda-cultural-en.png',
   },
   {
     name: 'KODA MedComm',
     tagline: 'Medical communication assistant. Accurate, compliant healthcare documentation.',
     href: '/products/medcomm',
+    logo: '/assets/koda/logos/web/koda-medcomm-en.png',
   },
   {
     name: 'KODA Assist',
     tagline: 'Operational assistant AI. Support frontline workers with real-time guidance.',
     href: '/products/assist',
+    logo: '/assets/koda/logos/web/koda-assist-en.png',
   },
   {
     name: 'KODA DocIntel',
     tagline: 'Document intelligence platform. Extract insights from technical documentation.',
     href: '/products/docintel',
+    logo: '/assets/koda/logos/web/koda-docintel-en.png',
   },
   {
     name: 'KODA Training',
     tagline: 'Training and simulation AI. Accelerate workforce upskilling with adaptive learning.',
     href: '/products/training',
+    logo: '/assets/koda/logos/web/koda-training-en.png',
   },
   {
     name: 'KODA Industry',
     tagline: 'Industrial process AI. Optimize manufacturing with domain-specific intelligence.',
     href: '/products/industry',
+    logo: '/assets/koda/logos/web/koda-industry-en.png',
   },
 ]
 

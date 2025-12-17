@@ -1,19 +1,21 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface Product {
   name: string
   tagline: string
   href: string
-  icon?: string
+  logo?: string
 }
 
 interface ProductTilesProps {
   products: Product[]
   title?: string
   subtitle?: string
+  locale?: 'en' | 'jp'
 }
 
-export default function ProductTiles({ products, title, subtitle }: ProductTilesProps) {
+export default function ProductTiles({ products, title, subtitle, locale = 'en' }: ProductTilesProps) {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
@@ -39,12 +41,16 @@ export default function ProductTiles({ products, title, subtitle }: ProductTiles
               href={product.href}
               className="group block p-6 bg-neutral-50 border border-neutral-200 rounded-lg hover:border-koda-red hover:shadow-sm transition-all"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded bg-white border border-neutral-200 flex items-center justify-center text-koda-red shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                  </svg>
-                </div>
+              <div className="flex flex-col gap-4">
+                {product.logo && (
+                  <div className="h-12 flex items-center">
+                    <img
+                      src={product.logo}
+                      alt={product.name}
+                      className="h-10 w-auto object-contain"
+                    />
+                  </div>
+                )}
                 <div>
                   <h3 className="text-lg font-semibold text-neutral-900 group-hover:text-koda-red transition-colors mb-1">
                     {product.name}
