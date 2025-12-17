@@ -6,29 +6,34 @@ import CTA from '@/components/koda/CTA'
 
 const products = [
   {
-    name: 'KODA Predict',
-    tagline: 'Predictive maintenance for industrial equipment. Reduce downtime, extend asset life.',
-    href: '/products/predict',
+    name: 'KODA Cultural',
+    tagline: 'Cross-cultural communication AI. Bridge language and cultural gaps in global operations.',
+    href: '/products/cultural',
   },
   {
-    name: 'KODA Optimise',
-    tagline: 'Process optimization through real-time analysis. Improve yield, reduce waste.',
-    href: '/products/optimise',
+    name: 'KODA MedComm',
+    tagline: 'Medical communication assistant. Accurate, compliant healthcare documentation.',
+    href: '/products/medcomm',
   },
   {
-    name: 'KODA Vision',
-    tagline: 'Visual inspection and quality control. Detect defects humans miss.',
-    href: '/products/vision',
+    name: 'KODA Assist',
+    tagline: 'Operational assistant AI. Support frontline workers with real-time guidance.',
+    href: '/products/assist',
   },
   {
-    name: 'KODA Twin',
-    tagline: 'Digital twin simulation for manufacturing. Test changes before deployment.',
-    href: '/products/twin',
+    name: 'KODA DocIntel',
+    tagline: 'Document intelligence platform. Extract insights from technical documentation.',
+    href: '/products/docintel',
   },
   {
-    name: 'White Label',
-    tagline: 'Deploy KODA technology under your brand. Enterprise licensing available.',
-    href: '/products/white-label',
+    name: 'KODA Training',
+    tagline: 'Training and simulation AI. Accelerate workforce upskilling with adaptive learning.',
+    href: '/products/training',
+  },
+  {
+    name: 'KODA Industry',
+    tagline: 'Industrial process AI. Optimize manufacturing with domain-specific intelligence.',
+    href: '/products/industry',
   },
 ]
 
@@ -61,6 +66,8 @@ export default function HomePage() {
           label: 'Request Technical Briefing',
           href: '/contact',
         }}
+        imageSrc="/assets/koda/hero/products/koda-home-hero.png"
+        imageAlt="KODA Industrial AI"
         variant="dark"
       />
 
@@ -68,7 +75,7 @@ export default function HomePage() {
       <DiagramBlock
         title="The KODA Triad"
         description="Clear separation between what you buy, what powers it, and how we help you succeed."
-        imageSrc="/assets/koda/infographics/svg/koda-triad.svg"
+        imageSrc="/assets/koda/infographics/koda-triad.png"
         imageAlt="KODA Triad: Products, Solutions, Services"
         caption="Products = safe packages | Solutions = internal engines | Services = human engagement"
         variant="wide"

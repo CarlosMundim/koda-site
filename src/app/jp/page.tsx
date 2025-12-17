@@ -6,29 +6,34 @@ import CTA from '@/components/koda/CTA'
 
 const products = [
   {
-    name: 'KODA Predict',
-    tagline: '設備の予知保全。ダウンタイム削減、資産寿命延長。',
-    href: '/jp/products/predict',
+    name: 'KODA Cultural',
+    tagline: '異文化コミュニケーションAI。グローバル運用における言語・文化の壁を解消。',
+    href: '/jp/products/cultural',
   },
   {
-    name: 'KODA Optimise',
-    tagline: 'リアルタイム分析によるプロセス最適化。歩留まり向上、廃棄削減。',
-    href: '/jp/products/optimise',
+    name: 'KODA MedComm',
+    tagline: '医療コミュニケーション支援。正確でコンプライアント準拠の医療文書作成。',
+    href: '/jp/products/medcomm',
   },
   {
-    name: 'KODA Vision',
-    tagline: '外観検査と品質管理。人が見逃す欠陥を検出。',
-    href: '/jp/products/vision',
+    name: 'KODA Assist',
+    tagline: '業務アシスタントAI。リアルタイムガイダンスで現場作業者を支援。',
+    href: '/jp/products/assist',
   },
   {
-    name: 'KODA Twin',
-    tagline: '製造向けデジタルツインシミュレーション。導入前に変更をテスト。',
-    href: '/jp/products/twin',
+    name: 'KODA DocIntel',
+    tagline: '文書インテリジェンス。技術文書からインサイトを抽出。',
+    href: '/jp/products/docintel',
   },
   {
-    name: 'ホワイトラベル',
-    tagline: '貴社ブランドでKODA技術を展開。エンタープライズライセンス提供。',
-    href: '/jp/products/white-label',
+    name: 'KODA Training',
+    tagline: 'トレーニング・シミュレーションAI。適応学習で人材育成を加速。',
+    href: '/jp/products/training',
+  },
+  {
+    name: 'KODA Industry',
+    tagline: '産業プロセスAI。ドメイン特化インテリジェンスで製造を最適化。',
+    href: '/jp/products/industry',
   },
 ]
 
@@ -61,6 +66,8 @@ export default function JPHomePage() {
           label: '技術ブリーフィングを依頼',
           href: '/jp/contact',
         }}
+        imageSrc="/assets/koda/hero/products/koda-home-hero.png"
+        imageAlt="KODA 産業AI"
         variant="dark"
       />
 
@@ -68,7 +75,7 @@ export default function JPHomePage() {
       <DiagramBlock
         title="KODAトライアド"
         description="購入するもの、それを動かすもの、成功を支援するもの。明確な分離。"
-        imageSrc="/assets/koda/infographics/svg/koda-triad.svg"
+        imageSrc="/assets/koda/infographics/koda-triad.png"
         imageAlt="KODAトライアド: プロダクト、ソリューション、サービス"
         caption="プロダクト = 安全なパッケージ | ソリューション = 内部エンジン | サービス = 人的支援"
         variant="wide"
