@@ -74,7 +74,7 @@ export default function JPHomePage() {
         }}
         imageSrc="/assets/koda/hero/products/koda-home-hero.png"
         imageAlt="KODA 産業AI"
-        variant="dark"
+        variant="fullscreen"
       />
 
       {/* Triad Diagram */}

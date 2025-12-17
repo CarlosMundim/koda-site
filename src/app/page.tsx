@@ -74,7 +74,7 @@ export default function HomePage() {
         }}
         imageSrc="/assets/koda/hero/products/koda-home-hero.png"
         imageAlt="KODA Industrial AI"
-        variant="dark"
+        variant="fullscreen"
       />
 
       {/* Triad Diagram */}
