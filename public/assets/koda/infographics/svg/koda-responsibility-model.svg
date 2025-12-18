@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Placeholder: KODA responsibility model. Grayscale, A4 printable. -->
+  <rect x="50" y="50" width="1100" height="700" fill="white" stroke="#111827" stroke-width="2" />
+  <text x="100" y="120" font-family="Arial" font-size="28" fill="#111827">Responsibility & Autonomy Model (placeholder)</text>
+  <rect x="100" y="180" width="320" height="500" fill="#F3F4F6" stroke="#D1D5DB" />
+  <text x="120" y="220" font-family="Arial" font-size="18" fill="#111827">Advisory (default)</text>
+  <rect x="440" y="180" width="320" height="500" fill="#E5E7EB" stroke="#D1D5DB" />
+  <text x="460" y="220" font-family="Arial" font-size="18" fill="#111827">Assisted</text>
+  <rect x="780" y="180" width="320" height="500" fill="#F9FAFB" stroke="#D1D5DB" />
+  <text x="800" y="220" font-family="Arial" font-size="18" fill="#111827">Automated (with controls)</text>
+  <text x="120" y="270" font-family="Arial" font-size="14" fill="#374151">Operator approval</text>
+  <text x="460" y="270" font-family="Arial" font-size="14" fill="#374151">Safeguards + approvals</text>
+  <text x="800" y="270" font-family="Arial" font-size="14" fill="#374151">Only with site governance</text>
+</svg>

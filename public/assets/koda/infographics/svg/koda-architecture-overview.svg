@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Placeholder: KODA architecture overview. Use grayscale, no gradients. Safe for A4 print. -->
+  <rect x="50" y="50" width="1100" height="700" fill="white" stroke="#111827" stroke-width="2" />
+  <text x="100" y="120" font-family="Arial" font-size="28" fill="#111827">KODA Architecture Overview (placeholder)</text>
+  <rect x="100" y="180" width="1000" height="140" fill="#F3F4F6" stroke="#D1D5DB" />
+  <text x="120" y="250" font-family="Arial" font-size="20" fill="#111827">Products (deployable packages)</text>
+  <rect x="100" y="360" width="1000" height="140" fill="#E5E7EB" stroke="#D1D5DB" />
+  <text x="120" y="430" font-family="Arial" font-size="20" fill="#111827">Solution Engines (internal)</text>
+  <rect x="100" y="540" width="1000" height="140" fill="#F9FAFB" stroke="#D1D5DB" />
+  <text x="120" y="610" font-family="Arial" font-size="20" fill="#111827">Governance (people, policy, controls)</text>
+</svg>
